@@ -1,0 +1,335 @@
+h1 {
+  text-align: center;
+  font-family: "ideas";
+  font-size: 60px;
+}
+@font-face {
+  font-family: "cycleoffourths";
+  src: url("../fonts/CycleOfFourthsDemoRegular-OGPX6.otf") format("truetype");
+  font-family: "ideas";
+  src: url("../fonts/IdeasRegular.ttf") format("truetype");
+  font-family: "danella";
+  src: url("../fonts/DanellaJasmineDemoRegular.ttf") format("truetype");
+}
+body {
+  font-family: "ideas";
+  font-size: 40px;
+  background-color: black;
+  color: white;
+}
+
+.line1 {
+  animation: transformanimation 2s alternate infinite;
+}
+
+.line3 span {
+  transition: Transform 0.5s;
+  animation: transformanimation 2s alternate infinite;
+  display: inline-block;
+}
+
+.line5 {
+  transition: Transform 0.5s;
+  animation-name: opacityanimation2;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.line5 span {
+  animation-name: shakeanimation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.line6 {
+  text-align: right;
+}
+
+.line6 span {
+  display: inline-block;
+  opacity: 100;
+  animation: spin 4s ease-in-out infinite;
+}
+
+.line8 span {
+  animation: scale 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+.line7 span {
+  animation: moveLeft 7s ease-in-out infinite;
+  display: inline-block;
+}
+
+.line9 span {
+  transform-origin: center;
+  animation: transformup 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.line10 span {
+  display: inline-block;
+  opacity: 100;
+  animation: spin 4s ease-in-out infinite;
+}
+
+.line11 span {
+  animation: scale 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+.line14 span {
+  animation: glowYeah 5s ease-in-out infinite;
+}
+
+.line13 span {
+  animation: opacityanimation 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+.line15 span {
+  animation: moveRight 7s ease-in-out infinite;
+  display: inline-block;
+}
+
+.line16 span {
+  animation: spin 4s ease-in-out infinite;
+  display: inline-block;
+}
+.line17 span {
+  animation: shiver 0.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+.line20 span:nth-child(1) {
+  animation: transformup 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.line20 span:nth-child(2) {
+  animation: transformanimation 2s alternate infinite;
+  display: inline-block;
+}
+
+.line21 span:nth-child(1) {
+  display: inline-block;
+  animation: transformanimation 2s alternate infinite;
+}
+.line21 span:nth-child(2) {
+  display: inline-block;
+  animation: transformanimationLower 2s alternate infinite;
+}
+.line21 span:nth-child(3) {
+  display: inline-block;
+  animation: transformanimationLowest 2s alternate infinite;
+}
+
+.line7,
+.line8,
+.line9,
+.line16,
+.line17,
+.line18,
+.line19,
+.line20,
+.line21 {
+  text-align: right;
+}
+
+p {
+  text-align: center;
+  font-family: "ideas";
+  font-size: 20px;
+}
+
+@keyframes shiver {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, -5px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  75% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+    scale: 1;
+  }
+}
+
+@keyframes glowYeah {
+  0% {
+    text-shadow: none;
+  }
+  90% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+      0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes shakeanimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, 0);
+  }
+  50% {
+    transform: translate(5px, 0);
+  }
+  75% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes opacityanimation {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes transformanimation {
+  0% {
+    transform-origin: center;
+    transform: translate(0, 0);
+  }
+  100% {
+    transform-origin: center;
+    transform: translate(0, 15px);
+  }
+}
+
+@keyframes transformanimationLower {
+  0% {
+    transform-origin: center;
+    transform: translate(0, 0);
+  }
+  100% {
+    transform-origin: center;
+    transform: translate(0, 30px);
+  }
+}
+
+@keyframes transformanimationLowest {
+  0% {
+    transform-origin: center;
+    transform: translate(0, 0);
+  }
+  100% {
+    transform-origin: center;
+    transform: translate(0, 45px);
+  }
+}
+
+@keyframes transformup {
+  0% {
+    transform: translate(0, -20px);
+  }
+  50% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0, -20px);
+  }
+}
+
+@keyframes scaleanimation {
+  0% {
+    transform: scale(1) skew(0deg, 0deg);
+  }
+  100% {
+    transform: scale(1.5) skew(10deg, 10deg);
+  }
+}
+@keyframes opacityanimation2 {
+  from {
+    color: gray;
+  }
+  to {
+    color: white;
+  }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  0% {
+    transform-origin: center;
+    transform: translate(0, 0);
+  }
+  100% {
+    transform-origin: center;
+    transform: translate(0, 15px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 100;
+    transform: rotate(0deg) skew(0deg);
+  }
+  100% {
+    opacity: 100;
+    transform: rotate(360deg) skew(-30deg);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
